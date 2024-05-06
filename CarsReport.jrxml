@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CarsReport" pageWidth="800" pageHeight="1000" columnWidth="760" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5abd509e-4aec-481e-a2ab-a806c34c6e45">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="352"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="638"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SmoothWheelAdapter"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT COUNT(Car_ID), MANUFACTURER_COMPANY, GEAR_TYPE, FUEL_TYPE, RENTAL_FEE_PER_DAY
+FROM Car
+GROUP BY MANUFACTURER_COMPANY, GEAR_TYPE, FUEL_TYPE, RENTAL_FEE_PER_DAY]]>
+	</queryString>
+	<field name="COUNT(CAR_ID)" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="COUNT(CAR_ID)"/>
+	</field>
+	<field name="MANUFACTURER_COMPANY" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MANUFACTURER_COMPANY"/>
+	</field>
+	<field name="GEAR_TYPE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="GEAR_TYPE"/>
+	</field>
+	<field name="FUEL_TYPE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FUEL_TYPE"/>
+	</field>
+	<field name="RENTAL_FEE_PER_DAY" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="RENTAL_FEE_PER_DAY"/>
+	</field>
+	<group name="COUNT(CAR_ID)">
+		<groupExpression><![CDATA[$F{COUNT(CAR_ID)}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="251" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="-20" y="131" width="800" height="119" backcolor="#F2F0F0" uuid="efc93b49-ef04-4cb6-90aa-0c2470fcb7d4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Smooth Wheel reports We put in your hands to convert your congested and scattered paper files into well-arranged, and modern reports that are easy to manage and handle with a click of button.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="-20" y="0" width="801" height="131" backcolor="#222324" uuid="9135c323-8549-478c-9950-ef8ca93f228e"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="0" width="160" height="131" uuid="53b05fa1-e8de-44b8-9dd1-e7edb1ec6f1e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["CarIcon.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="190" y="0" width="590" height="80" forecolor="#FFFFFF" uuid="ec592dc0-d6f5-4790-9752-5bdd7b83057d"/>
+				<textElement>
+					<font size="55"/>
+				</textElement>
+				<text><![CDATA[Smooth Wheel Reports]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="90" width="270" height="30" forecolor="#E3E3E3" uuid="bc6078ca-2c48-4b5f-a5d9-bd42ebaa1588"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[A world of ease and technology]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="200" height="20" uuid="22d5730f-9a85-4466-accb-a4f1aea74cc5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Count Of Cars]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="200" height="20" uuid="a07da36b-3f9f-4ed7-ab65-90bade0edb98">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Manufacturer Company]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="2" width="200" height="20" uuid="72b46506-f9f1-462d-a1ca-995221b5a9ec">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Gear Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="580" y="1" width="200" height="20" uuid="3891a218-8ba0-4c14-a99a-e1564cab9816">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Fuel Type]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="580" y="-2" width="200" height="20" uuid="960edc65-031f-46ba-8d45-cbc955648ffe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FUEL_TYPE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="0" width="200" height="20" uuid="3ed1b2a2-2da7-4824-b06e-0860cfe52198">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COUNT(CAR_ID)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="200" height="20" uuid="d8a2428f-c34f-46cf-bb43-a338280676b1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GEAR_TYPE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="200" height="20" uuid="679a2e65-3e34-4d9b-a94c-54b7576bf1a7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MANUFACTURER_COMPANY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="345" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="-20" y="0" width="801" height="325" backcolor="#F0EDED" uuid="71c82c7d-191c-49f5-8ab5-96f42a11e9dc"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<bar3DChart>
+				<chart evaluationTime="Report">
+					<reportElement x="60" y="50" width="610" height="200" uuid="b0f647ea-9e12-436b-a814-107f45880a54"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{MANUFACTURER_COMPANY}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{GEAR_TYPE}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{COUNT(CAR_ID)}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+			<textField>
+				<reportElement mode="Opaque" x="-20" y="325" width="730" height="20" backcolor="#E6E6E6" uuid="9813b413-3687-4f4d-b229-c67b16053bb3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="710" y="325" width="70" height="20" backcolor="#E6E6E6" uuid="67fcdb9b-b50d-48c7-9842-1fcc5e8e1d14"/>
+				<textElement verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="-10" y="325" width="150" height="20" uuid="2531bb25-9c36-4016-97cc-2fb977faf21a"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
